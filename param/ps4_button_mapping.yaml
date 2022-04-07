@@ -1,0 +1,60 @@
+# BUTTON MAPPING FOR DUALSHOCK 4
+################################
+#
+# BUTTON_CROSS         = 0;
+# BUTTON_CIRCLE        = 1;
+# BUTTON_TRIANGLE      = 2;
+# BUTTON_SQUARE        = 3;
+#
+# BUTTON_L1            = 4;
+# BUTTON_R1            = 5;
+# BUTTON_L2            = 6;
+# BUTTON_R2            = 7;
+#
+# BUTTON_SHARE         = 8;
+# BUTTON_OPTIONS       = 9;
+# BUTTON_PS            = 10;
+#
+# BUTTON_L3            = 11;
+# BUTTON_R3            = 12;
+#
+#
+# AXIS_LEFT_WEST       = 0;
+# AXIS_LEFT_NORTH      = 1;
+# AXIS_L2              = 2;
+#
+# AXIS_RIGHT_WEST      = 3;
+# AXIS_RIGHT_NORTH     = 4;
+# AXIS_R2              = 5;
+#
+# AXIS_DPAD_WEST       = 6;
+# AXIS_DPAD_NORTH      = 7;
+#################################
+
+button_mapping:
+
+  button:
+    enable: 1
+    disable: 3
+
+    lift_up: 0
+    lift_down: 2
+
+    toggle_twist: 10
+
+    dead_man_button: 5
+    dead_man_slow: 7
+
+    print_pose: 8
+    elm_mapping_mode: 9
+
+
+  axis:
+    trans_x: 1
+    trans_y: 0
+
+    rot_z: 3  
+
+    west: 6
+    north: 7 
+

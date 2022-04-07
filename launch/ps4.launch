@@ -1,0 +1,23 @@
+<launch>
+
+  <arg name="joy_topic" value="evo_rd_joy/joy"/>
+
+  <node pkg="evo_rd_joy" type="evo_rd_joy" name="evo_rd_joy" output="screen">
+    <param name="v_max"                 value="1.0"/>
+    <param name="averaging_window_size" value="20"/>
+
+    <rosparam file="$(find evo_rd_joy)/param/ps4_button_mapping.yaml" command="load" /> 
+    
+    <remap from="cmd_vel" to="cmd_vel/joy"/>
+    <remap from="joy"     to="$(arg joy_topic)"/>
+  </node>
+
+
+  <node pkg="joy" type="joy_node" name="joy_node">
+    <param name="dev"             value="/dev/input/js0"/>
+    <param name="autorepeat_rate" value="30"/>
+
+    <remap from="joy" to="$(arg joy_topic)"/> 
+  </node>
+
+</launch>
